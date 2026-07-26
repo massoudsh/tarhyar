@@ -1,4 +1,4 @@
-# فا — Task List
+# طرح‌یار — Task List
 
 Traceable to [ARCHITECTURE.md](./ARCHITECTURE.md) and [ROADMAP.md](./ROADMAP.md). Use for sprint planning or GitHub Issues.
 

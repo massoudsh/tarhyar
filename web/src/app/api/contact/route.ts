@@ -54,8 +54,8 @@ export async function POST(req: NextRequest) {
   // const { Resend } = await import("resend");
   // const resend = new Resend(process.env.RESEND_API_KEY);
   // await resend.emails.send({
-  //   from: "archlang <noreply@fa-arch.ir>",
-  //   to: "info@fa-arch.ir",
+  //   from: "طرح‌یار <noreply@tarhyar.ir>",
+  //   to: "info@tarhyar.ir",
   //   subject: `درخواست مشاوره جدید — ${data.name}`,
   //   text: [
   //     `نام: ${data.name}`,

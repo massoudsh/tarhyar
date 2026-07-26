@@ -19,7 +19,7 @@ export function Navbar() {
               <span className="absolute inset-x-1 top-2 h-1.5 bg-warm-white" />
               <span className="absolute bottom-2 right-2 h-1.5 w-5 bg-warm-white" />
             </span>
-            فا
+            طرح‌یار
           </Link>
 
           <ul className="hidden items-center gap-0 sm:flex">

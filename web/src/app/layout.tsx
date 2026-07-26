@@ -11,13 +11,13 @@ const displayFont = Vazirmatn({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://fa-arch.ir";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tarhyar.ir";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "فا | معماری مسکونی لوکس — طراحی و مدیریت اجرا",
-    template: "%s | فا",
+    default: "طرح‌یار | معماری مسکونی لوکس — طراحی و مدیریت اجرا",
+    template: "%s | طرح‌یار",
   },
   description:
     "بپیچیده‌ترین مسکن‌های خصوصی در تهران را از ایده تا تحویل طراحی و مدیریت می‌کنیم. کنترل، دقت، اقتدار.",
@@ -27,15 +27,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fa_IR",
     url: siteUrl,
-    siteName: "فا | معماری مسکونی",
-    title: "فا | معماری مسکونی لوکس — طراحی و مدیریت اجرا",
+    siteName: "طرح‌یار | معماری مسکونی",
+    title: "طرح‌یار | معماری مسکونی لوکس — طراحی و مدیریت اجرا",
     description:
       "بپیچیده‌ترین مسکن‌های خصوصی در تهران را از ایده تا تحویل طراحی و مدیریت می‌کنیم.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "فا معماری" }],
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "طرح‌یار معماری" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "فا | معماری مسکونی لوکس",
+    title: "طرح‌یار | معماری مسکونی لوکس",
     description: "طراحی و مدیریت اجرا — یک دیدگاه واحد از ایده تا تحویل",
     images: ["/og-image.jpg"],
   },
@@ -47,11 +47,11 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": siteUrl,
-  name: "دفتر معماری فا",
+  name: "دفتر معماری طرح‌یار",
   description: "طراحی معماری مسکونی لوکس و مدیریت اجرا در تهران",
   url: siteUrl,
   telephone: "+98-912-123-4567",
-  email: "info@fa-arch.ir",
+  email: "info@tarhyar.ir",
   address: {
     "@type": "PostalAddress",
     addressLocality: "تهران",

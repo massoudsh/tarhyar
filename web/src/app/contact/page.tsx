@@ -1,7 +1,7 @@
 import { ContactForm } from "@/components/contact/ContactForm";
 
 export const metadata = {
-  title: "تماس | فا",
+  title: "تماس | طرح‌یار",
   description: "درخواست جلسه مشاوره رایگان برای پروژه معماری مسکونی شما",
 };
 
@@ -35,7 +35,7 @@ export default function ContactPage() {
               </span>
               <div>
                 <p className="text-sm font-medium text-charcoal">ایمیل</p>
-                <a href="mailto:info@fa-arch.ir" className="mt-0.5 block text-sm text-charcoal/60 hover:text-material-glass transition-colors" dir="ltr">info@fa-arch.ir</a>
+                <a href="mailto:info@tarhyar.ir" className="mt-0.5 block text-sm text-charcoal/60 hover:text-material-glass transition-colors" dir="ltr">info@tarhyar.ir</a>
               </div>
             </div>
             <div className="flex items-start gap-4">

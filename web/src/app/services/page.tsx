@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "خدمات | فا",
+  title: "خدمات | طرح‌یار",
   description:
     "طراحی، توسعه فنی، و مدیریت اجرا — یک دیدگاه واحد از ایده تا تحویل",
 };

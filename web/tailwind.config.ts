@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-// فا design system — industrial architecture / material grid
+// طرح‌یار design system — industrial architecture / material grid
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",

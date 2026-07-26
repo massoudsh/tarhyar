@@ -24,7 +24,7 @@ export function Footer() {
                 <span className="absolute right-2 top-2 h-2 w-6 bg-charcoal" />
                 <span className="absolute bottom-2 right-2 h-2 w-5 bg-charcoal" />
               </span>
-              فا
+              طرح‌یار
             </div>
             <p className="mt-6 max-w-sm text-sm leading-8 text-warm-white/58">
               طراحی، توسعه فنی و مدیریت اجرای پروژه‌های مسکونی با منطق سازه، متریال و کنترل دقیق جزئیات.
@@ -60,7 +60,7 @@ export function Footer() {
               ))}
             </ul>
             <p className="mt-8 text-xs uppercase tracking-[0.2em] text-warm-white/35">
-              © {new Date().getFullYear()} FA ARCHITECTURE
+              © {new Date().getFullYear()} TARHYAR ARCHITECTURE
             </p>
           </div>
         </div>

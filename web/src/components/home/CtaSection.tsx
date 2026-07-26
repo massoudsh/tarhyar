@@ -22,7 +22,7 @@ export function CtaSection() {
             Your vision. Our foundation.
           </p>
           <h2 className="font-display text-4xl font-black leading-tight sm:text-5xl">
-            فا دفتر معماریِ متریال‌محور و کنترل‌گراست
+            طرح‌یار دفتر معماریِ متریال‌محور و کنترل‌گراست
           </h2>
           <p className="mt-6 max-w-2xl text-sm leading-8 text-charcoal/62">
             اگر پروژه شما به تصمیم‌های دقیق، مستندسازی فنی و نظارت جدی نیاز دارد، مسیر را با یک گفتگوی کوتاه شروع کنیم.

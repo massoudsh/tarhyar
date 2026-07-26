@@ -6,7 +6,7 @@ The Vercel target has been removed. The app is now packaged as a standalone Dock
 
 ```bash
 cd web
-docker build -t fa-web:latest .
+docker build -t tarhyar-web:latest .
 ```
 
 The image runs a Next.js standalone server on port `3000` (`node server.js`), produced via `output: "standalone"` in `next.config.ts`.
@@ -14,9 +14,9 @@ The image runs a Next.js standalone server on port `3000` (`node server.js`), pr
 ## 2. Push to ArvanCloud Container Registry
 
 ```bash
-docker tag fa-web:latest <your-arvan-registry>/fa-web:latest
+docker tag tarhyar-web:latest <your-arvan-registry>/tarhyar-web:latest
 docker login <your-arvan-registry>
-docker push <your-arvan-registry>/fa-web:latest
+docker push <your-arvan-registry>/tarhyar-web:latest
 ```
 
 Replace `<your-arvan-registry>` with your ArvanCloud Container Registry (ACR) endpoint from the ArvanCloud panel.

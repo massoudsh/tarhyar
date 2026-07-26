@@ -1,7 +1,7 @@
-# فا — Architectural Resume
+# طرح‌یار — Architectural Resume
 
-**Project:** Luxury Residential Architect Website (Design + Execution Management)  
-**Product name:** فا  
+**Project:** Luxury Residential Architect Website (Design + Execution Management)
+**Product name:** طرح‌یار
 **Target market:** High-end domestic Iranian clients  
 **Document type:** Architecture + PRD task breakdown
 
@@ -258,8 +258,8 @@ Tasks are grouped by **page/feature** and by **milestone**. Each item is testabl
 
 | Version | Date | Change |
 |---------|------|--------|
-| 0.1 | 2025-02-23 | Initial architecture + full PRD task breakdown for فا |
+| 0.1 | 2025-02-23 | Initial architecture + full PRD task breakdown for طرح‌یار |
 
 ---
 
-*فا — Luxury Residential Architect Website. Architecture and PRD tasks. Not a portfolio gallery; a credibility and conversion engine.*
+*طرح‌یار — Luxury Residential Architect Website. Architecture and PRD tasks. Not a portfolio gallery; a credibility and conversion engine.*

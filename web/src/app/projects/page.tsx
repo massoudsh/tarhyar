@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ProjectFilter } from "@/components/projects/ProjectFilter";
 
 export const metadata: Metadata = {
-  title: "پروژه‌ها | فا",
+  title: "پروژه‌ها | طرح‌یار",
   description: "مجموعه پروژه‌های معماری مسکونی لوکس — از ویلاهای اجراشده تا مطالعات مفهومی",
 };
 

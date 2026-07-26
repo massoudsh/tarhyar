@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "صفحه یافت نشد | فا",
+  title: "صفحه یافت نشد | طرح‌یار",
 };
 
 export default function NotFound() {

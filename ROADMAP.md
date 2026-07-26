@@ -1,6 +1,6 @@
-# فا — Full Project Roadmap
+# طرح‌یار — Full Project Roadmap
 
-**Product:** Luxury residential architect website (فا)  
+**Product:** Luxury residential architect website (طرح‌یار)
 **Target:** High-end domestic Iranian clients  
 **Principle:** Control · Precision · Authority · Calm confidence  
 **Repo:** [github.com/massoudsh/archlang](https://github.com/massoudsh/archlang)
@@ -126,4 +126,4 @@
 
 ---
 
-*فا — Luxury residential architect website. Control · Precision · Authority · Calm confidence.*
+*طرح‌یار — Luxury residential architect website. Control · Precision · Authority · Calm confidence.*
