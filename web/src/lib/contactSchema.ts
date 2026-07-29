@@ -15,8 +15,16 @@ export const contactSchema = z.object({
     .optional()
     .or(z.literal("")),
   projectType: z
-    .enum(["ویلا", "پنت‌هاوس", "خانه مستقل", "آپارتمان لوکس", "بازسازی", "سایر"] as const)
-    .refine((v) => v.length > 0, { message: "نوع پروژه را انتخاب کنید" }),
+    .enum(
+      [
+        "دفتر معماری کوچک (۱ تا ۵ نفر)",
+        "دفتر معماری متوسط/بزرگ",
+        "شرکت طراحی-ساخت (Design-Build)",
+        "سازنده/توسعه‌دهنده (Developer)",
+        "سایر",
+      ] as const
+    )
+    .refine((v) => v.length > 0, { message: "نوع دفتر را انتخاب کنید" }),
   area: z.string().max(50).optional(),
   message: z
     .string()

@@ -6,8 +6,9 @@ import { projects, type ProjectType } from "@/data/projects";
 
 const filterOptions: { label: string; value: "all" | ProjectType }[] = [
   { label: "همه", value: "all" },
-  { label: "ساخته‌شده", value: "ساخته‌شده" },
-  { label: "مفهومی", value: "مفهومی" },
+  { label: "منطقه ۱", value: "منطقه ۱" },
+  { label: "منطقه ۳", value: "منطقه ۳" },
+  { label: "منطقه ۵", value: "منطقه ۵" },
 ];
 
 export function ProjectFilter() {

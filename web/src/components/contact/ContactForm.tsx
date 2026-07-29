@@ -15,11 +15,10 @@ type FormState = {
 type FieldErrors = Partial<Record<keyof FormState, string>>;
 
 const projectTypes = [
-  "ویلا",
-  "پنت‌هاوس",
-  "خانه مستقل",
-  "آپارتمان لوکس",
-  "بازسازی",
+  "دفتر معماری کوچک (۱ تا ۵ نفر)",
+  "دفتر معماری متوسط/بزرگ",
+  "شرکت طراحی-ساخت (Design-Build)",
+  "سازنده/توسعه‌دهنده (Developer)",
   "سایر",
 ] as const;
 

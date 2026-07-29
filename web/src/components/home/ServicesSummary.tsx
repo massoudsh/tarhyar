@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const services = [
-  { title: "طراحی معماری", desc: "نقشه، فرم و منطق فضایی", material: "MINERAL PLASTER", tone: "bg-material-plaster text-charcoal" },
-  { title: "توسعه فنی", desc: "جزئیات، دیتیل و هماهنگی سازه", material: "ARCHITECTURAL GLASS", tone: "bg-material-glass text-warm-white" },
-  { title: "مدیریت اجرا", desc: "کنترل کارگاه، زمان و کیفیت", material: "STRUCTURAL CONCRETE", tone: "bg-material-concrete text-warm-white" },
+  { title: "ورودی سایت و ضوابط", desc: "شکل زمین، جهت‌گیری و ضوابط منطقه در چند دقیقه", material: "SITE & RULE DATA", tone: "bg-material-plaster text-charcoal" },
+  { title: "تولید گزینه Massing", desc: "۳ تا ۵ گزینه حجمی در سقف ضوابط", material: "MASSING ENGINE", tone: "bg-material-glass text-warm-white" },
+  { title: "مقایسه و گزارش تصمیم", desc: "سطح مفید، نورگیری، پارکینگ و ریسک ضوابطی", material: "DECISION REPORT", tone: "bg-material-concrete text-warm-white" },
 ];
 
 export function ServicesSummary() {
@@ -13,14 +13,14 @@ export function ServicesSummary() {
         <div className="grid gap-8 border-b border-charcoal/12 pb-10 lg:grid-cols-[.8fr_1.2fr] lg:items-end">
           <div>
             <p className="mb-4 border-r-4 border-material-glass pr-3 text-xs font-black uppercase tracking-[0.26em] text-charcoal/55">
-              Materials / Services
+              Product / Modules
             </p>
             <h2 className="font-display text-4xl font-black leading-tight text-charcoal sm:text-5xl">
-              خدمات به شکل قطعات دقیق یک سازه
+              کوپایلوت به شکل سه لایه‌ی تصمیم‌ساز
             </h2>
           </div>
           <p className="max-w-2xl text-sm leading-8 text-charcoal/60">
-            هر خدمت مثل یک متریال مستقل طراحی شده: روشن، قابل اندازه‌گیری، و قابل اتصال به کل سیستم پروژه.
+            هر لایه مستقل کار می‌کند، اما در کنار هم، از شکل خام زمین به یک تصمیم قابل دفاع می‌رسند.
           </p>
         </div>
 

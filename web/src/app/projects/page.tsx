@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { ProjectFilter } from "@/components/projects/ProjectFilter";
 
 export const metadata: Metadata = {
-  title: "پروژه‌ها | طرح‌یار",
-  description: "مجموعه پروژه‌های معماری مسکونی لوکس — از ویلاهای اجراشده تا مطالعات مفهومی",
+  title: "نمونه تحلیل‌ها | طرح‌یار",
+  description: "نمونه‌های تحلیل کوپایلوت روی زمین‌های نمونه در سه منطقه تهران — ضوابط، گزینه‌های Massing و دلیل انتخاب",
 };
 
 export default function ProjectsPage() {
@@ -13,13 +13,13 @@ export default function ProjectsPage() {
         <div className="material-grid absolute inset-0 opacity-75" aria-hidden="true" />
         <div className="relative mx-auto max-w-content border-x border-warm-white/10 px-4 sm:px-6 lg:px-8">
           <p className="mb-6 w-fit border-r-4 border-material-glass pr-4 text-xs font-black uppercase tracking-[0.28em] text-warm-white/70">
-            Portfolio Grid
+            Sample Analyses
           </p>
           <h1 className="max-w-3xl font-display text-5xl font-black leading-tight text-warm-white sm:text-7xl">
-            پروژه‌ها به‌عنوان مستندات ساخت
+            نمونه تحلیل‌ها با طرح‌یار
           </h1>
           <p className="mt-6 max-w-2xl text-sm leading-8 text-warm-white/58">
-            هر کارت، یک قطعه از سیستم طراحی و اجراست: موقعیت، متریال، وضعیت و نقش معمار در یک گرید دقیق.
+            هر کارت، خروجی خط‌لوله کوپایلوت روی یک زمین نمونه است: ضوابط منطقه، گزینه‌های Massing، مقایسه و دلیل انتخاب گزینه برتر.
           </p>
         </div>
       </section>

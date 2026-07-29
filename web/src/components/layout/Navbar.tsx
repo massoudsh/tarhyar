@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const navItems = [
   { href: "/copilot", label: "کوپایلوت" },
-  { href: "/projects", label: "پروژه‌ها" },
+  { href: "/projects", label: "نمونه تحلیل‌ها" },
   { href: "/services", label: "خدمات" },
   { href: "/about", label: "درباره" },
 ];

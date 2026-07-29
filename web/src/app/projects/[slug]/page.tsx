@@ -39,19 +39,12 @@ export default async function ProjectDetailPage({ params }: Props) {
           <nav aria-label="مسیر" className="mb-6 flex items-center gap-2 text-sm text-warm-white/60">
             <Link href="/" className="hover:text-warm-white transition-colors">خانه</Link>
             <span aria-hidden>/</span>
-            <Link href="/projects" className="hover:text-warm-white transition-colors">پروژه‌ها</Link>
+            <Link href="/projects" className="hover:text-warm-white transition-colors">نمونه تحلیل‌ها</Link>
             <span aria-hidden>/</span>
             <span className="text-warm-white/90">{project.title}</span>
           </nav>
 
-          <span
-            className={[
-              "inline-block border px-3 py-1 text-xs font-black uppercase tracking-[0.16em] mb-4",
-              project.type === "ساخته‌شده"
-                ? "bg-material-glass text-warm-white"
-                : "bg-warm-white/90 text-charcoal",
-            ].join(" ")}
-          >
+          <span className="inline-block border px-3 py-1 text-xs font-black uppercase tracking-[0.16em] mb-4 bg-material-glass text-warm-white">
             {project.type}
           </span>
           <h1 className="font-display text-4xl font-black text-warm-white sm:text-5xl lg:text-6xl">
@@ -101,31 +94,31 @@ export default async function ProjectDetailPage({ params }: Props) {
           <div className="lg:col-span-2 space-y-12">
             {/* Description */}
             <section>
-              <h2 className="mb-4 text-sm font-medium tracking-[0.3em] text-material-glass uppercase">درباره پروژه</h2>
+              <h2 className="mb-4 text-sm font-medium tracking-[0.3em] text-material-glass uppercase">درباره این تحلیل</h2>
               <p className="text-charcoal/80 leading-[2] text-lg font-light">
                 {project.description}
               </p>
             </section>
 
-            {/* Designer note */}
+            {/* Analysis note */}
             <section className="border-r-2 border-material-glass pr-6">
-              <p className="mb-2 text-sm font-medium tracking-[0.3em] text-material-glass uppercase">یادداشت طراح</p>
+              <p className="mb-2 text-sm font-medium tracking-[0.3em] text-material-glass uppercase">نکته تحلیل</p>
               <blockquote className="text-charcoal/70 leading-[1.9] text-base">
                 «{project.designerNote}»
               </blockquote>
             </section>
 
-            {/* Role clarification */}
+            {/* Scope clarification */}
             {project.roleNote && (
               <section className="border border-charcoal/12 bg-material-sand px-5 py-4">
-                <p className="text-xs font-medium tracking-widest text-charcoal/55 uppercase mb-1">نقش طراح در این پروژه</p>
+                <p className="text-xs font-medium tracking-widest text-charcoal/55 uppercase mb-1">دامنه این تحلیل</p>
                 <p className="text-sm text-charcoal/70">{project.roleNote}</p>
               </section>
             )}
 
             {/* Scope */}
             <section>
-              <h2 className="mb-5 text-sm font-medium tracking-[0.3em] text-material-glass uppercase">حوزه کار</h2>
+              <h2 className="mb-5 text-sm font-medium tracking-[0.3em] text-material-glass uppercase">حوزه تحلیل</h2>
               <ul className="grid gap-3 sm:grid-cols-2">
                 {project.scope.map((item) => (
                   <li key={item} className="flex items-center gap-3 text-charcoal/70">
@@ -155,9 +148,9 @@ export default async function ProjectDetailPage({ params }: Props) {
               ))}
             </div>
 
-            {/* Materials */}
+            {/* Modules used */}
             <div>
-              <h3 className="mb-4 text-sm font-medium tracking-[0.3em] text-material-glass uppercase">مصالح</h3>
+              <h3 className="mb-4 text-sm font-medium tracking-[0.3em] text-material-glass uppercase">ماژول‌های استفاده‌شده</h3>
               <ul className="space-y-2">
                 {project.materials.map((m) => (
                   <li key={m} className="flex items-center gap-2 text-sm text-charcoal/60">
@@ -175,13 +168,13 @@ export default async function ProjectDetailPage({ params }: Props) {
             {/* CTA */}
             <div className="border border-charcoal bg-charcoal p-6 text-center shadow-arch-md">
               <p className="text-sm text-warm-white/85 mb-4 leading-relaxed">
-                پروژه مشابهی در ذهن دارید؟
+                زمینی با ضوابط مشابه دارید؟
               </p>
               <Link
-                href="/contact"
+                href="/copilot"
                 className="inline-block w-full border border-warm-white bg-warm-white px-4 py-3 text-sm font-black uppercase tracking-[0.14em] text-charcoal transition-all hover:bg-material-glass hover:text-warm-white hover:shadow-arch-md"
               >
-                درخواست مشاوره
+                امتحان با زمین خودتان
               </Link>
             </div>
           </aside>
@@ -194,7 +187,7 @@ export default async function ProjectDetailPage({ params }: Props) {
             className="inline-flex items-center gap-2 text-sm text-charcoal/50 hover:text-material-glass transition-colors"
           >
             <span aria-hidden>←</span>
-            بازگشت به همه پروژه‌ها
+            بازگشت به همه نمونه‌ها
           </Link>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { ContactForm } from "@/components/contact/ContactForm";
 
 export const metadata = {
   title: "تماس | طرح‌یار",
-  description: "درخواست جلسه مشاوره رایگان برای پروژه معماری مسکونی شما",
+  description: "درخواست پایلوت رایگان کوپایلوت برای دفتر معماری یا شرکت طراحی-ساخت شما",
 };
 
 export default function ContactPage() {
@@ -13,7 +13,7 @@ export default function ContactPage() {
           <p className="mb-3 text-sm font-medium tracking-[0.3em] text-material-glass uppercase">Contact</p>
           <h1 className="font-display text-4xl font-black text-charcoal sm:text-5xl">تماس</h1>
           <p className="mt-5 text-charcoal/60 leading-[2] text-base">
-            پروژه‌ای دارید؟ بگذارید بشنویم. اولین جلسه همیشه رایگان است.
+            دفتر معماری یا شرکت طراحی-ساخت هستید؟ درباره پایلوت رایگان کوپایلوت صحبت کنیم.
           </p>
           <div className="mt-10 space-y-6">
             <div className="flex items-start gap-4">
@@ -46,7 +46,7 @@ export default function ContactPage() {
               </span>
               <div>
                 <p className="text-sm font-medium text-charcoal">دفتر</p>
-                <p className="mt-0.5 text-sm text-charcoal/60">الهیه، تهران</p>
+                <p className="mt-0.5 text-sm text-charcoal/60">تهران، ایران</p>
               </div>
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function ContactPage() {
         </div>
         <div className="lg:col-span-3">
           <div className="border border-charcoal/12 bg-warm-white p-8 shadow-arch-md sm:p-10">
-            <h2 className="mb-6 text-xl font-bold text-charcoal">فرم درخواست مشاوره</h2>
+            <h2 className="mb-6 text-xl font-bold text-charcoal">فرم درخواست پایلوت</h2>
             <ContactForm />
           </div>
         </div>

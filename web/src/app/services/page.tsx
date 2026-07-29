@@ -4,61 +4,62 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "خدمات | طرح‌یار",
   description:
-    "طراحی، توسعه فنی، و مدیریت اجرا — یک دیدگاه واحد از ایده تا تحویل",
+    "چگونه طرح‌یار از ورودی سایت تا گزارش تصمیم، دفاتر معماری را در فاز Concept همراهی می‌کند",
 };
 
 const services = [
   {
     number: "۰۱",
-    title: "طراحی معماری",
-    tagline: "از ایده تا نقشه",
+    title: "ورودی سایت و ضوابط",
+    tagline: "از شکل زمین تا محدودیت‌های قانونی",
     description:
-      "فرایند طراحی با درک دقیق از سبک زندگی، نیازها، و آرزوهای شما شروع می‌شود. سپس مفهوم اولیه شکل می‌گیرد، بررسی می‌شود، و به مجموعه کامل نقشه‌های اجرایی تبدیل می‌شود.",
+      "شکل زمین را رسم یا مختصات را وارد کنید و جهت‌گیری، معابر مجاور و کاربری مجاز را مشخص کنید. طرح‌یار بلافاصله محدودیت‌های ضوابط منطقه — سطح اشغال، تراکم، طبقات، عقب‌نشینی و پارکینگ — را روی همان زمین اعمال می‌کند.",
     items: [
-      "برنامه‌ریزی فضایی و مطالعات اولیه",
-      "طراحی مفهومی و رندرینگ",
-      "نقشه‌های معماری کامل",
-      "هماهنگی با مشاوران سازه و تأسیسات",
-      "مجوزها و ضوابط شهرداری",
+      "رسم دستی یا ورود مختصات زمین",
+      "جهت‌گیری و معابر مجاور",
+      "کاربری مجاز",
+      "موتور ضوابط منطقه (سطح اشغال/تراکم/طبقات/پارکینگ)",
+      "دیتاست اولیه: مناطق ۱، ۳ و ۵ تهران",
     ],
   },
   {
     number: "۰۲",
-    title: "توسعه فنی",
-    tagline: "دقت در جزئیات",
+    title: "تولید گزینه Massing",
+    tagline: "۳ تا ۵ گزینه، نه ۱ یا ۲",
     description:
-      "جزئیات اجرایی، مشخصات فنی مصالح، و هماهنگی کامل بین تمام مشاوران. این مرحله تضمین می‌کند که آنچه طراحی شده، دقیقاً ساخته شود.",
+      "بر پایه سقف ضوابط و برنامه فیزیکی، طرح‌یار چند گزینه حجمی — فشرده، گسترده، حیاط مرکزی، دوتکه — تولید می‌کند تا فاز Concept با گزینه‌های واقعی بیشتری شروع شود، نه یک ایده اول.",
     items: [
-      "نقشه‌های جزئیات اجرایی",
-      "مشخصات فنی مصالح و تجهیزات",
-      "هماهنگی مشاوران سازه، مکانیک، الکتریک",
-      "برآورد دقیق هزینه",
-      "جدول زمان‌بندی اجرا",
+      "گزینه فشرده",
+      "گزینه گسترده",
+      "گزینه حیاط مرکزی",
+      "گزینه دوتکه",
+      "همه گزینه‌ها در سقف مجاز ضوابط",
     ],
   },
   {
     number: "۰۳",
-    title: "مدیریت اجرا",
-    tagline: "کنترل از آغاز تا تحویل",
+    title: "مقایسه و گزارش تصمیم",
+    tagline: "چرا این گزینه، نه آن یکی",
     description:
-      "حضور منظم در کارگاه، نظارت بر کیفیت اجرا، کنترل هزینه، و مدیریت پیمانکاران. هدف: دقیقاً آنچه طراحی شده، در بودجه و زمان تعیین‌شده تحویل داده شود.",
+      "هر گزینه از نظر سطح مفید، نورگیری، circulation، تامین پارکینگ و ریسک ضوابطی مقایسه می‌شود؛ خروجی یک گزارش تصمیم قابل ارائه به کارفرماست — قابل چاپ یا PDF.",
     items: [
-      "نظارت کارگاهی منظم",
-      "کنترل کیفیت مصالح و اجرا",
-      "مدیریت و هماهنگی پیمانکاران",
-      "کنترل بودجه و مغایرت‌گیری",
-      "گزارش‌دهی منظم به کارفرما",
+      "سطح مفید (net usable area)",
+      "تخمین نورگیری",
+      "کیفیت circulation",
+      "تامین پارکینگ",
+      "ریسک ضوابطی هر گزینه",
+      "خروجی چاپ/PDF",
     ],
   },
 ];
 
 const workflowSteps = [
-  { step: "۱", title: "جلسه اول", desc: "آشنایی، درک نیاز، بررسی زمین یا ملک" },
-  { step: "۲", title: "طراحی مفهومی", desc: "ارائه دو یا سه گزینه طراحی اولیه" },
-  { step: "۳", title: "توسعه طرح", desc: "تکامل طرح انتخابی تا سطح اجرایی" },
-  { step: "۴", title: "مجوزها", desc: "اخذ تأییدیه‌های شهرداری و نظام مهندسی" },
-  { step: "۵", title: "اجرا", desc: "نظارت مستمر بر کارگاه و مدیریت پیمانکاران" },
-  { step: "۶", title: "تحویل", desc: "بررسی نهایی، رفع نواقص، و تحویل پروژه" },
+  { step: "۱", title: "ورودی سایت", desc: "رسم زمین، جهت‌گیری، معابر و کاربری" },
+  { step: "۲", title: "موتور ضوابط", desc: "اعمال سطح اشغال، تراکم، طبقات و پارکینگ منطقه" },
+  { step: "۳", title: "گزینه‌های Massing", desc: "۳ تا ۵ گزینه حجمی در سقف ضوابط" },
+  { step: "۴", title: "مقایسه گزینه‌ها", desc: "سطح مفید، نورگیری، circulation، پارکینگ، ریسک" },
+  { step: "۵", title: "گزارش تصمیم", desc: "دلیل انتخاب گزینه برتر، آماده ارائه به کارفرما" },
+  { step: "۶", title: "پل به CAD", desc: "خروجی پایه برای Rhino / Revit / AutoCAD" },
 ];
 
 export default function ServicesPage() {
@@ -79,11 +80,10 @@ export default function ServicesPage() {
             Services
           </p>
           <h1 className="max-w-2xl font-display text-4xl font-black leading-[1.25] text-warm-white sm:text-5xl lg:text-6xl">
-            یک دیدگاه واحد از <span className="text-material-glass">ایده تا تحویل</span>
+            از ورودی سایت تا <span className="text-material-glass">گزارش تصمیم</span>
           </h1>
           <p className="mt-6 max-w-xl text-warm-white/50 leading-relaxed text-lg">
-            طراحی و اجرا در زیر یک سقف — بدون شکاف بین آنچه تصور می‌شود و
-            آنچه ساخته می‌شود.
+            طرح‌یار پیش از AutoCAD، Revit یا Rhino می‌نشیند و لایه تصمیم‌سازی فاز Concept را می‌سازد.
           </p>
         </div>
       </section>
@@ -136,10 +136,10 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8">
           <header className="mb-14 text-center">
             <p className="mb-3 text-sm font-medium tracking-[0.3em] text-material-glass uppercase">
-              Process
+              Pipeline
             </p>
             <h2 className="text-3xl font-black text-charcoal">
-              مراحل همکاری
+              خط‌لوله کوپایلوت
             </h2>
           </header>
 
@@ -167,16 +167,16 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className="mx-auto max-w-content px-4 py-20 sm:px-6 lg:px-8 text-center">
         <h2 className="text-2xl font-black text-charcoal mb-4">
-          پروژه‌ای در ذهن دارید؟
+          می‌خواهید روی زمین خودتان امتحان کنید؟
         </h2>
         <p className="text-charcoal/60 mb-8 max-w-md mx-auto">
-          با یک جلسه کوتاه شروع کنیم — بدون تعهد، فقط یک گفتگو.
+          کوپایلوت را رایگان روی یک زمین نمونه امتحان کنید یا برای پایلوت دفتر خود با ما صحبت کنید.
         </p>
         <Link
-          href="/contact"
+          href="/copilot"
           className="inline-flex items-center gap-2 border border-charcoal bg-charcoal px-8 py-4 text-warm-white shadow-arch-md transition-all hover:bg-material-glass hover:shadow-arch-lg focus-visible:ring-2 focus-visible:ring-material-glass/40 focus-visible:ring-offset-2"
         >
-          درخواست جلسه مشاوره
+          امتحان کوپایلوت
         </Link>
       </section>
     </main>

@@ -1,9 +1,10 @@
 import Link from "next/link";
 
 const columns = [
+  { href: "/copilot", label: "کوپایلوت" },
   { href: "/services", label: "خدمات" },
+  { href: "/projects", label: "نمونه تحلیل‌ها" },
   { href: "/about", label: "درباره ما" },
-  { href: "/projects", label: "پروژه‌ها" },
   { href: "/contact", label: "تماس" },
 ];
 
@@ -27,7 +28,7 @@ export function Footer() {
               طرح‌یار
             </div>
             <p className="mt-6 max-w-sm text-sm leading-8 text-warm-white/58">
-              طراحی، توسعه فنی و مدیریت اجرای پروژه‌های مسکونی با منطق سازه، متریال و کنترل دقیق جزئیات.
+              کوپایلوت هوشمند تحلیل ضوابط شهرداری و تولید گزینه‌های Massing — پیش از AutoCAD، Revit یا Rhino، طرح‌یار به دفاتر معماری کمک می‌کند بهترین گزینه را با اطمینان انتخاب کنند.
             </p>
           </div>
 
@@ -60,13 +61,13 @@ export function Footer() {
               ))}
             </ul>
             <p className="mt-8 text-xs uppercase tracking-[0.2em] text-warm-white/35">
-              © {new Date().getFullYear()} TARHYAR ARCHITECTURE
+              © {new Date().getFullYear()} TARHYAR AI COPILOT
             </p>
           </div>
         </div>
       </div>
       <div aria-hidden="true" className="relative -mb-6 border-t border-warm-white/10 text-center font-display text-[18vw] font-black leading-none tracking-tighter text-warm-white/[0.045]">
-        FOUNDATION
+        COPILOT
       </div>
     </footer>
   );

@@ -4,55 +4,55 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "درباره | طرح‌یار",
   description:
-    "بیست سال تجربه در طراحی و اجرای معماری مسکونی لوکس در تهران و حومه",
+    "چرا طرح‌یار ساخته شد و چه مسئله‌ای را برای دفاتر معماری ایران حل می‌کند",
 };
 
 const stats = [
-  { value: "۱۵+", label: "سال تجربه" },
-  { value: "۴۰+", label: "پروژه اجراشده" },
-  { value: "۱۲۰+", label: "خانواده خشنود" },
-  { value: "۸", label: "جایزه ملی" },
+  { value: "۳", label: "منطقه اولیه پوشش‌داده‌شده" },
+  { value: "۳–۵", label: "گزینه Massing در هر تحلیل" },
+  { value: "۶", label: "لایه در خط‌لوله راه‌حل" },
+  { value: "Pre-MVP", label: "فاز فعلی محصول" },
 ];
 
 const philosophy = [
   {
-    title: "کنترل",
-    desc: "هر پروژه از لحظه اول تا لحظه تحویل زیر یک نظارت واحد است. این یعنی وحدت بین ایده و اجرا.",
+    title: "شفافیت ضوابط",
+    desc: "هر عدد — سطح اشغال، تراکم، پارکینگ — از یک قاعده مشخص می‌آید، نه حدس. منبع هر ضابطه قابل ردیابی است.",
   },
   {
-    title: "دقت",
-    desc: "جزئیات تفاوت را می‌سازند. از زاویه یک دیوار تا رنگ یک دستگیره — همه‌چیز با دقت تعیین می‌شود.",
+    title: "گزینه‌محوری",
+    desc: "به‌جای یک ایده اول، حداقل ۳ تا ۵ گزینه واقعی و قابل مقایسه پیش از تصمیم‌گیری روی میز است.",
   },
   {
-    title: "اقتدار",
-    desc: "یک معمار باید بتواند به وضوح بگوید چرا. هر تصمیم دلیل دارد، هر دلیل قابل توضیح است.",
+    title: "زودهنگام بودن",
+    desc: "ریسک ضوابطی — پارکینگ کم، تخطی از سطح اشغال — در همان فاز Concept دیده می‌شود، نه در فاز اخذ پروانه.",
   },
   {
-    title: "آرامش",
-    desc: "فضاهایی می‌سازم که در آن‌ها نفس کشیدن آسان‌تر است. سکوت بصری نوعی لوکس است.",
+    title: "مکمل، نه جایگزین",
+    desc: "طرح‌یار پیش از AutoCAD/Revit/Rhino می‌نشیند و به آن‌ها خروجی می‌دهد — جایگزین ابزار ترسیم شما نیست.",
   },
 ];
 
-const experience = [
+const roadmap = [
   {
-    period: "۱۴۰۰ — اکنون",
-    role: "موسس و معمار ارشد",
-    place: "دفتر طرح‌یار — تهران",
+    period: "فاز ۰",
+    role: "Discovery",
+    place: "تعریف wedge اول و دیتاست پیش‌نویس ضوابط ۳ منطقه تهران — در حال انجام",
   },
   {
-    period: "۱۳۹۵ — ۱۴۰۰",
-    role: "معمار ارشد",
-    place: "دفتر معماری سپهر",
+    period: "فاز ۱",
+    role: "MVP",
+    place: "موتور ظرفیت زمین + مولد گزینه Massing — در حال ساخت",
   },
   {
-    period: "۱۳۹۰ — ۱۳۹۵",
-    role: "معمار",
-    place: "گروه طراحی آرین",
+    period: "فاز ۲",
+    role: "Risk Flagging",
+    place: "هشدار زودهنگام ریسک ضوابطی — برنامه بعدی",
   },
   {
-    period: "۱۳۸۵ — ۱۳۹۰",
-    role: "فارغ‌التحصیل کارشناسی‌ارشد معماری",
-    place: "دانشگاه تهران",
+    period: "فاز ۳ و ۴",
+    role: "Collaboration & Scale",
+    place: "همکاری تیمی، قیمت‌گذاری SaaS و گسترش جغرافیایی — آینده",
   },
 ];
 
@@ -62,38 +62,42 @@ export default function AboutPage() {
       {/* Intro */}
       <section className="mx-auto max-w-content px-4 py-20 sm:px-6 lg:px-8">
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-24 items-start">
-          {/* Portrait placeholder */}
+          {/* Diagram placeholder */}
           <div
             className="border border-charcoal/12 bg-material-asphalt overflow-hidden shadow-arch-lg concrete-texture"
-            aria-label="تصویر معمار"
+            aria-label="نمودار مفهومی خط‌لوله کوپایلوت"
           >
             <div className="h-full w-full bg-gradient-to-br from-espresso-light to-espresso" />
           </div>
 
-          {/* Bio */}
+          {/* Mission */}
           <div className="flex flex-col justify-center">
             <p className="mb-3 text-sm font-medium tracking-[0.3em] text-material-glass uppercase">
               About
             </p>
             <h1 className="font-display text-4xl font-black text-charcoal sm:text-5xl">
-              فرهاد اسکندری
+              طرح‌یار
             </h1>
-            <p className="mt-2 text-charcoal/50">معمار مسکونی</p>
+            <p className="mt-2 text-charcoal/50">کوپایلوت طراحی و ضوابط برای دفاتر معماری</p>
 
             <div className="mt-8 space-y-5 text-charcoal/70 leading-[2] text-base">
               <p>
-                بیست‌وپنج سال است که فضاهای مسکونی طراحی می‌کنم — از آپارتمان‌های
-                کوچک در تهران تا ویلاهای چند‌هزارمتری در البرز. در این سال‌ها
-                فهمیدم که معماری خوب نه در حجم، که در دقت نهفته است.
+                هر پروژه ساختمانی، قبل از این‌که نقشه شود، یک تصمیم است: زمین چقدر ظرفیت دارد؟
+                کدام حجم بهترین جواب طراحی و اقتصادی را می‌دهد؟ در دفاتر معماری ایرانی این تصمیم‌ها
+                معمولاً بر پایه تجربه فردی و چک‌لیست دستی گرفته می‌شود — نه چون معمار توانایی
+                ندارد، بلکه چون ابزار مناسبی برای بررسی سریع چند گزینه در کنار ضوابط پیچیده
+                منطقه‌ای وجود ندارد.
               </p>
               <p>
-                در سال ۱۴۰۰ دفتر طرح‌یار را با یک هدف مشخص تأسیس کردم: ارائه خدمات
-                طراحی و اجرا زیر یک سقف واحد، با کنترل کامل بر کیفیت در هر مرحله.
-                این مدل در ایران غیرمعمول است — و همین تفاوت را می‌سازد.
+                AutoCAD، Revit و Rhino ابزارهای قدرتمندی برای ترسیم و مدل‌سازی‌اند، اما بعد از
+                تصمیم وارد می‌شوند، نه پیش از آن. طرح‌یار دقیقاً همان جای خالی را پر می‌کند: لایه‌ای
+                که سایت را می‌فهمد، ضوابط منطقه را اعمال می‌کند، چند گزینه Massing تولید می‌کند و
+                توضیح می‌دهد چرا یک گزینه بهتر است.
               </p>
               <p>
-                کارهای من اغلب ساده به نظر می‌رسند. این سادگی نتیجه سال‌ها تمرین
-                در حذف کردن آن چیزی است که لازم نیست.
+                نسخه اول روی یک wedge مشخص تمرکز دارد — تحلیل ظرفیت زمین و تولید گزینه‌های
+                Massing — با دیتاست دستی چند منطقه پرتقاضای تهران. هدف نهایی، تبدیل‌شدن به لایه
+                هوشمند تصمیم‌سازی طراحی و ضوابط برای معماری ایران است.
               </p>
             </div>
 
@@ -126,7 +130,7 @@ export default function AboutPage() {
               Philosophy
             </p>
             <h2 className="text-3xl font-black text-warm-white">
-              فلسفه طراحی
+              اصول طرح‌یار
             </h2>
           </header>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -143,16 +147,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Experience timeline */}
+      {/* Roadmap timeline */}
       <section className="mx-auto max-w-content px-4 py-20 sm:px-6 lg:px-8">
         <header className="mb-12">
           <p className="mb-3 text-sm font-medium tracking-[0.3em] text-material-glass uppercase">
-            Experience
+            Roadmap
           </p>
-          <h2 className="text-3xl font-black text-charcoal">سابقه حرفه‌ای</h2>
+          <h2 className="text-3xl font-black text-charcoal">نقشه‌راه محصول</h2>
         </header>
         <ol className="space-y-0">
-          {experience.map((exp, i) => (
+          {roadmap.map((exp, i) => (
             <li key={i} className="grid grid-cols-[1fr_auto] gap-6 border-b border-warm-grey-deep/40 py-8 last:border-none sm:grid-cols-[12rem_1fr]">
               <p className="text-sm text-charcoal/40 font-mono">{exp.period}</p>
               <div>
@@ -168,9 +172,9 @@ export default function AboutPage() {
       <section className="bg-warm-grey/40 py-16 sm:py-20">
         <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
-            <h2 className="text-2xl font-black text-charcoal">بیایید با هم کار کنیم</h2>
+            <h2 className="text-2xl font-black text-charcoal">می‌خواهید پایلوت اولیه باشید؟</h2>
             <p className="mt-2 text-charcoal/60 text-sm">
-              اگر پروژه‌ای دارید که به دقت و کنترل نیاز دارد، اینجا هستم.
+              اگر دفتر معماری یا شرکت طراحی-ساخت هستید، خوشحال می‌شویم درباره پایلوت رایگان صحبت کنیم.
             </p>
           </div>
           <Link

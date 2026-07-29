@@ -18,8 +18,8 @@ function BlueprintBlock() {
         ))}
       </div>
       <div className="absolute bottom-8 left-8 border border-warm-white/20 bg-warm-white px-5 py-4 text-charcoal">
-        <p className="text-xs font-black uppercase tracking-[0.22em]">YOUR VISION.</p>
-        <p className="mt-1 text-xs font-black uppercase tracking-[0.22em]">OUR FOUNDATION.</p>
+        <p className="text-xs font-black uppercase tracking-[0.22em]">SITE IN.</p>
+        <p className="mt-1 text-xs font-black uppercase tracking-[0.22em]">OPTIONS OUT.</p>
       </div>
     </div>
   );
@@ -33,22 +33,22 @@ export function Hero() {
         <div className="flex min-h-[36rem] flex-col justify-between border-b border-warm-white/10 pb-8 lg:border-b-0 lg:border-l lg:pb-0 lg:pl-10">
           <div>
             <p className="mb-10 w-fit border-r-4 border-material-glass pr-4 text-xs font-black uppercase tracking-[0.28em] text-warm-white/72">
-              Residential Architecture
+              AI Design &amp; Compliance Copilot
             </p>
             <h1 className="max-w-3xl font-display text-5xl font-black leading-[1.12] tracking-tight text-warm-white sm:text-7xl lg:text-8xl">
-              ساختن پایه‌های دقیق برای زندگی ماندگار
+              زمین را بفهمید، گزینه‌ها را بسازید، با اطمینان تصمیم بگیرید
             </h1>
             <p className="mt-8 max-w-xl text-base leading-9 text-warm-white/58 sm:text-lg">
-              طراحی، توسعه فنی و مدیریت اجرای خانه‌های خصوصی با زبانی صنعتی، دقیق و متریال‌محور.
+              طرح‌یار ظرفیت زمین را تحلیل می‌کند، ضوابط منطقه را اعمال می‌کند و چند گزینه Massing قابل مقایسه تولید می‌کند — پیش از ورود به AutoCAD، Revit یا Rhino.
             </p>
           </div>
 
           <div className="mt-12 grid gap-4 sm:grid-cols-[auto_1fr] sm:items-end">
-            <Link href="/contact" className="border border-warm-white bg-warm-white px-7 py-4 text-center text-xs font-black uppercase tracking-[0.22em] text-charcoal transition-colors hover:bg-material-glass hover:text-warm-white">
-              شروع پروژه ←
+            <Link href="/copilot" className="border border-warm-white bg-warm-white px-7 py-4 text-center text-xs font-black uppercase tracking-[0.22em] text-charcoal transition-colors hover:bg-material-glass hover:text-warm-white">
+              امتحان کوپایلوت ←
             </Link>
             <div className="grid grid-cols-3 border border-warm-white/14">
-              {["۱۵+ سال", "۴۰+ پروژه", "۱۲۰+ خانواده"].map((item) => (
+              {["۳ تا ۵ گزینه", "۳ منطقه تهران", "ساعت‌ها نه روزها"].map((item) => (
                 <span key={item} className="border-l border-warm-white/14 px-4 py-4 text-center text-xs font-bold text-warm-white/70 last:border-l-0">
                   {item}
                 </span>

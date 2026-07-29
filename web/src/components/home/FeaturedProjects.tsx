@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { projects } from "@/data/projects";
 
-const featured = projects.slice(0, 4);
 const tickerItems = projects.map((p) => `${p.title} — ${p.year}`);
 
 export function FeaturedProjects() {
@@ -11,18 +10,18 @@ export function FeaturedProjects() {
         <div className="flex flex-wrap items-end justify-between gap-6 border-b border-charcoal/12 pb-8">
           <div>
             <p className="mb-4 border-r-4 border-material-glass pr-3 text-xs font-black uppercase tracking-[0.26em] text-charcoal/55">
-              Project Grid
+              Sample Analyses
             </p>
-            <h2 className="font-display text-4xl font-black text-charcoal sm:text-5xl">پروژه‌های منتخب</h2>
+            <h2 className="font-display text-4xl font-black text-charcoal sm:text-5xl">نمونه تحلیل‌ها</h2>
           </div>
           <Link href="/projects" className="border border-charcoal px-6 py-3 text-xs font-black uppercase tracking-[0.2em] text-charcoal transition-colors hover:bg-charcoal hover:text-warm-white">
-            همه پروژه‌ها ←
+            همه نمونه‌ها ←
           </Link>
         </div>
 
-        <div className="mt-8 grid auto-rows-[18rem] gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {featured.map((p, i) => (
-            <Link key={p.slug} href={`/projects/${p.slug}`} className={["group relative overflow-hidden border border-charcoal/12 bg-warm-white p-5 shadow-arch-sm", i === 0 ? "lg:col-span-2 lg:row-span-2" : ""].join(" ")}>
+        <div className="mt-8 grid auto-rows-[18rem] gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {projects.map((p) => (
+            <Link key={p.slug} href={`/projects/${p.slug}`} className="group relative overflow-hidden border border-charcoal/12 bg-warm-white p-5 shadow-arch-sm">
               <div className="absolute inset-0 concrete-texture opacity-65" style={{ backgroundColor: p.coverColor }} aria-hidden="true" />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/75 via-charcoal/18 to-transparent" />
               <div className="relative z-10 flex h-full flex-col justify-between text-warm-white">
