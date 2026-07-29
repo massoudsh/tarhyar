@@ -1,9 +1,9 @@
 # طرح‌یار — Full Project Roadmap
 
-**Product:** Luxury residential architect website (طرح‌یار)
-**Target:** High-end domestic Iranian clients  
-**Principle:** Control · Precision · Authority · Calm confidence  
-**Repo:** [github.com/massoudsh/archlang](https://github.com/massoudsh/archlang)
+**Product:** AI architectural design & compliance copilot for Iranian design offices (طرح‌یار)
+**Target:** Architecture and design-build offices in Tehran
+**Principle:** Control · Precision · Authority · Calm confidence
+**Repo:** [github.com/massoudsh/tarhyar](https://github.com/massoudsh/tarhyar)
 
 ---
 
@@ -126,4 +126,4 @@
 
 ---
 
-*طرح‌یار — Luxury residential architect website. Control · Precision · Authority · Calm confidence.*
+*طرح‌یار — AI architectural design & compliance copilot. Control · Precision · Authority · Calm confidence.*
