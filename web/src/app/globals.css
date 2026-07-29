@@ -90,3 +90,8 @@ textarea:focus-visible {
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee { animation: none; }
 }
+
+@media print {
+  .no-print { display: none !important; }
+  header, footer { display: none !important; }
+}
