@@ -48,33 +48,42 @@ export async function POST(req: NextRequest) {
 
   const data = result.data;
 
-  // Email delivery — plug in Resend / SendGrid here
-  // Example with Resend (uncomment and add RESEND_API_KEY env):
-  //
-  // const { Resend } = await import("resend");
-  // const resend = new Resend(process.env.RESEND_API_KEY);
-  // await resend.emails.send({
-  //   from: "طرح‌یار <noreply@tarhyar.ir>",
-  //   to: "info@tarhyar.ir",
-  //   subject: `درخواست مشاوره جدید — ${data.name}`,
-  //   text: [
-  //     `نام: ${data.name}`,
-  //     `موبایل: ${data.phone}`,
-  //     `ایمیل: ${data.email ?? "—"}`,
-  //     `نوع پروژه: ${data.projectType}`,
-  //     `متراژ: ${data.area ?? "—"}`,
-  //     `توضیحات:\n${data.message}`,
-  //   ].join("\n"),
-  // });
+  const apiKey = process.env.RESEND_API_KEY;
+  const recipient = process.env.CONTACT_TO_EMAIL;
+  if (!apiKey || !recipient) {
+    return NextResponse.json(
+      { error: "فرم تماس هنوز برای دریافت پیام‌ها پیکربندی نشده است." },
+      { status: 503 },
+    );
+  }
 
-  // In development / before email is configured, log to console
-  if (process.env.NODE_ENV !== "production") {
-    console.log("[contact] new submission:", {
-      name: data.name,
-      phone: data.phone,
-      email: data.email,
-      projectType: data.projectType,
-    });
+  const emailResponse = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from: process.env.CONTACT_FROM_EMAIL ?? "onboarding@resend.dev",
+      to: [recipient],
+      subject: `درخواست پایلوت جدید از ${data.name}`,
+      text: [
+        `نام: ${data.name}`,
+        `موبایل: ${data.phone}`,
+        `ایمیل: ${data.email || "—"}`,
+        `نوع دفتر: ${data.projectType}`,
+        `متراژ: ${data.area || "—"}`,
+        "",
+        data.message,
+      ].join("\n"),
+    }),
+  });
+
+  if (!emailResponse.ok) {
+    return NextResponse.json(
+      { error: "ارسال پیام انجام نشد. دوباره تلاش کنید." },
+      { status: 502 },
+    );
   }
 
   return NextResponse.json({ ok: true }, { status: 200 });
