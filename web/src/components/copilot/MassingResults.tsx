@@ -101,7 +101,7 @@ export function MassingResults({ compliance, options, comparison, report }: Prop
                 <th className="px-3 py-2.5 text-right font-bold">گزینه</th>
                 <th className="px-3 py-2.5 text-right font-bold">سطح مفید</th>
                 <th className="px-3 py-2.5 text-right font-bold">نورگیری</th>
-                <th className="px-3 py-2.5 text-right font-bold">circulation</th>
+                <th className="px-3 py-2.5 text-right font-bold">دسترسی داخلی</th>
                 <th className="px-3 py-2.5 text-right font-bold">تامین پارکینگ</th>
                 <th className="px-3 py-2.5 text-right font-bold">ریسک ضوابطی</th>
                 <th className="px-3 py-2.5 text-right font-bold">امتیاز کلی</th>

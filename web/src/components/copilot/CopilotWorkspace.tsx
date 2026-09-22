@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import type {
   AdjacentStreet,
   ComparisonResult,
@@ -48,6 +48,10 @@ export function CopilotWorkspace() {
   const [errors, setErrors] = useState<string[]>([]);
   const [result, setResult] = useState<ResultState | null>(null);
 
+  useEffect(() => {
+    setResult(null);
+  }, [polygon, orientationDeg, streets, zoneId, allowedUse, plannedUnitCount]);
+
   function handleGenerate() {
     const zone = getZoneById(zoneId);
     if (!zone) {
@@ -81,14 +85,18 @@ export function CopilotWorkspace() {
   }
 
   return (
-    <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
-      <div className="space-y-8 no-print">
-        <section>
+    <div className="grid gap-8 xl:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+      <div className="space-y-5 no-print">
+        <div className="border-r-2 border-accent-bronze bg-material-sand/40 px-4 py-3">
+          <p className="text-xs font-black text-charcoal">ورودی پروژه</p>
+          <p className="mt-1 text-xs leading-relaxed text-charcoal/60">مختصات زمین را وارد کنید، ضوابط را انتخاب کنید و یک تحلیل قابل‌مقایسه دریافت کنید.</p>
+        </div>
+        <section className="border border-charcoal/10 bg-warm-white p-4 sm:p-5">
           <h2 className="mb-4 font-display text-lg font-black text-charcoal">۱. شکل و متراژ زمین</h2>
           <SiteCanvasInput polygon={polygon} onChange={setPolygon} />
         </section>
 
-        <section>
+        <section className="border border-charcoal/10 bg-warm-white p-4 sm:p-5">
           <h2 className="mb-4 font-display text-lg font-black text-charcoal">۲. جهت‌گیری و معابر مجاور</h2>
           <div className="mb-4">
             <label htmlFor={`${uid}-orientation`} className="mb-1.5 block text-xs font-bold text-charcoal/70">
@@ -107,7 +115,7 @@ export function CopilotWorkspace() {
           <AdjacentStreetsInput streets={streets} onChange={setStreets} />
         </section>
 
-        <section>
+        <section className="border border-charcoal/10 bg-warm-white p-4 sm:p-5">
           <h2 className="mb-4 font-display text-lg font-black text-charcoal">۳. کاربری و ضوابط منطقه</h2>
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
@@ -170,13 +178,17 @@ export function CopilotWorkspace() {
         <button
           type="button"
           onClick={handleGenerate}
-          className="w-full border border-charcoal bg-charcoal px-6 py-4 text-sm font-black uppercase tracking-[0.14em] text-warm-white shadow-arch-md transition-all hover:bg-material-glass"
+          className="w-full border border-charcoal bg-charcoal px-6 py-4 text-sm font-black text-warm-white shadow-arch-md transition-all hover:bg-material-glass focus:outline-none focus:ring-2 focus:ring-accent-bronze focus:ring-offset-2"
         >
-          تولید گزینه‌های Massing و گزارش
+          تحلیل ضوابط و تولید گزینه‌ها
         </button>
       </div>
 
-      <div>
+      <div className="min-w-0">
+        <div className="mb-4 flex items-center justify-between border-b border-charcoal/10 pb-3">
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-charcoal/50">خروجی تحلیل</p>
+          <span className={`text-xs font-bold ${result ? "text-accent-bronze" : "text-charcoal/40"}`}>{result ? "به‌روز" : "در انتظار ورودی"}</span>
+        </div>
         {result ? (
           <MassingResults
             compliance={result.compliance}
@@ -185,8 +197,10 @@ export function CopilotWorkspace() {
             report={result.report}
           />
         ) : (
-          <div className="flex h-full min-h-[300px] items-center justify-center border border-dashed border-charcoal/20 px-6 text-center text-sm text-charcoal/40">
-            پس از تکمیل فرم سمت راست، نتایج موتور ضوابط، گزینه‌های massing، مقایسه و گزارش تصمیم اینجا نمایش داده می‌شود.
+          <div className="flex min-h-[420px] flex-col items-center justify-center border border-dashed border-charcoal/20 bg-material-sand/20 px-8 text-center">
+            <span className="mb-4 font-display text-4xl font-black text-charcoal/15">۰۱</span>
+            <p className="max-w-sm text-sm font-bold text-charcoal/65">تحلیل هنوز تولید نشده است.</p>
+            <p className="mt-2 max-w-sm text-xs leading-relaxed text-charcoal/45">پس از تکمیل سه گام ورودی، سقف‌های ساخت، گزینه‌های Massing، مقایسه و گزارش تصمیم در این بخش نمایش داده می‌شود.</p>
           </div>
         )}
       </div>

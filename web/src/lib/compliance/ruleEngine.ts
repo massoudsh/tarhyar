@@ -34,12 +34,44 @@ export function polygonPerimeter(polygon: Point[]): number {
   return sum;
 }
 
+function orientation(a: Point, b: Point, c: Point): number {
+  return (b.x - a.x) * (c.y - a.y) - (b.y - a.y) * (c.x - a.x);
+}
+
+function segmentsIntersect(a: Point, b: Point, c: Point, d: Point): boolean {
+  const abC = orientation(a, b, c);
+  const abD = orientation(a, b, d);
+  const cdA = orientation(c, d, a);
+  const cdB = orientation(c, d, b);
+  return abC * abD < 0 && cdA * cdB < 0;
+}
+
+export function hasSelfIntersection(polygon: Point[]): boolean {
+  for (let i = 0; i < polygon.length; i++) {
+    const a = polygon[i];
+    const b = polygon[(i + 1) % polygon.length];
+    for (let j = i + 1; j < polygon.length; j++) {
+      if (Math.abs(i - j) <= 1 || (i === 0 && j === polygon.length - 1)) continue;
+      const c = polygon[j];
+      const d = polygon[(j + 1) % polygon.length];
+      if (segmentsIntersect(a, b, c, d)) return true;
+    }
+  }
+  return false;
+}
+
 /** اعتبارسنجی هندسی/فیلدی ورودی سایت (بخشی از issue #17) */
 export function validateSiteInput(site: SiteInput): SiteInputValidation {
   const errors: string[] = [];
 
   if (site.polygon.length < 3) {
     errors.push("چندضلعی زمین باید حداقل ۳ رأس داشته باشد.");
+  }
+  if (site.polygon.some((point) => !Number.isFinite(point.x) || !Number.isFinite(point.y))) {
+    errors.push("مختصات تمام رأس‌های زمین باید عددی و معتبر باشند.");
+  }
+  if (site.polygon.length >= 4 && hasSelfIntersection(site.polygon)) {
+    errors.push("اضلاع زمین نباید یکدیگر را قطع کنند؛ ترتیب رأس‌ها را بررسی کنید.");
   }
 
   const areaSqm = polygonArea(site.polygon);
@@ -50,8 +82,12 @@ export function validateSiteInput(site: SiteInput): SiteInputValidation {
     errors.push("مساحت زمین بسیار کوچک به نظر می‌رسد (کمتر از ۲۰ متر مربع).");
   }
 
-  if (site.orientationDeg < 0 || site.orientationDeg >= 360) {
+  if (!Number.isFinite(site.orientationDeg) || site.orientationDeg < 0 || site.orientationDeg >= 360) {
     errors.push("جهت‌گیری باید بین ۰ تا ۳۶۰ درجه باشد.");
+  }
+
+  if (site.plannedUnitCount != null && (!Number.isInteger(site.plannedUnitCount) || site.plannedUnitCount < 1)) {
+    errors.push("تعداد واحد برنامه‌ریزی‌شده باید یک عدد صحیحِ حداقل ۱ باشد.");
   }
 
   if (site.adjacentStreets.length === 0) {
