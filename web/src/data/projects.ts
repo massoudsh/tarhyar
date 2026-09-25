@@ -36,6 +36,11 @@ export interface Project {
   accentColor: string;
 }
 
+export function projectPlaceholderImage(color: string, label: string): string {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect width="1200" height="800" fill="${color}"/><path d="M120 650H1080M180 590H1020M240 530H960" stroke="rgba(34,34,34,.18)" stroke-width="2"/><rect x="250" y="170" width="700" height="380" fill="none" stroke="rgba(34,34,34,.28)" stroke-width="6"/><rect x="330" y="250" width="180" height="220" fill="rgba(34,34,34,.08)"/><rect x="560" y="230" width="260" height="240" fill="rgba(34,34,34,.12)"/><text x="600" y="700" text-anchor="middle" font-family="Arial" font-size="36" fill="rgba(34,34,34,.55)">${label}</text></svg>`;
+  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+}
+
 export const projects: Project[] = [
   {
     slug: "zone1-sample-analysis",

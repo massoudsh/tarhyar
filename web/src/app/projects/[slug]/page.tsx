@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getProjectBySlug, projects } from "@/data/projects";
+import { getProjectBySlug, projectPlaceholderImage, projects } from "@/data/projects";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -31,8 +32,16 @@ export default async function ProjectDetailPage({ params }: Props) {
       {/* Hero banner */}
       <section
         className="relative min-h-[55vh] flex flex-col justify-end overflow-hidden bg-material-asphalt material-grid"
-        style={{ backgroundColor: project.coverColor }}
       >
+        <Image
+          src={projectPlaceholderImage(project.coverColor, project.type)}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-70"
+          unoptimized
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-espresso/90 via-espresso/30 to-transparent" />
         <div className="relative z-10 mx-auto w-full max-w-content px-4 pb-16 pt-32 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
@@ -68,17 +77,18 @@ export default async function ProjectDetailPage({ params }: Props) {
               <figure
                 key={i}
                 className={[
-                  "overflow-hidden border border-charcoal/12 shadow-arch-sm concrete-texture",
+                  "relative overflow-hidden border border-charcoal/12 shadow-arch-sm concrete-texture",
                   i === 0 ? "sm:col-span-2" : "",
                   item.aspect,
                 ].join(" ")}
               >
-                {/* Color placeholder — replace with next/image when assets are ready */}
-                <div
-                  className="h-full w-full"
-                  style={{ backgroundColor: item.color }}
-                  role="img"
-                  aria-label={item.caption}
+                <Image
+                  src={projectPlaceholderImage(item.color, item.caption)}
+                  alt={item.caption}
+                  fill
+                  sizes={i === 0 ? "(min-width: 1024px) 1200px, 100vw" : "(min-width: 640px) 50vw, 100vw"}
+                  className="object-cover"
+                  unoptimized
                 />
                 <figcaption className="sr-only">{item.caption}</figcaption>
               </figure>

@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { projects, type ProjectType } from "@/data/projects";
+import { projectPlaceholderImage, projects, type ProjectType } from "@/data/projects";
 
 const filterOptions: { label: string; value: "all" | ProjectType }[] = [
   { label: "همه", value: "all" },
@@ -43,7 +44,16 @@ export function ProjectFilter() {
         {filtered.map((project, i) => (
           <li key={project.slug} className={i === 0 ? "lg:col-span-2" : ""}>
             <Link href={`/projects/${project.slug}`} className="group relative block h-full overflow-hidden border border-charcoal/12 bg-warm-white p-5 shadow-arch-sm transition-transform hover:-translate-y-1">
-              <div className="absolute inset-0 concrete-texture opacity-70" style={{ backgroundColor: project.coverColor }} aria-hidden="true" />
+              <div className="absolute inset-0" aria-hidden="true">
+                <Image
+                  src={projectPlaceholderImage(project.coverColor, project.type)}
+                  alt=""
+                  fill
+                  sizes={i === 0 ? "(min-width: 1024px) 66vw, (min-width: 640px) 50vw, 100vw" : "(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"}
+                  className="object-cover concrete-texture opacity-70"
+                  unoptimized
+                />
+              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/20 to-transparent" />
               <div className="relative z-10 flex h-full flex-col justify-between text-warm-white">
                 <div className="flex items-start justify-between gap-4">
